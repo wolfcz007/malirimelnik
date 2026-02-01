@@ -582,77 +582,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    (function () {
-      const year = document.getElementById("year");
-      if (year) year.textContent = new Date().getFullYear();
-
-      const state = {
-        // default pro: metry, typ, stav stěn
-        m2: 60,
-        type: "byt",
-        walls: "normal",
-        rates: {
-          // sazby v Kč/m²
-          byt: { low: 45, high: 65 },
-          komerce: { low: 55, high: 80 }
-        },
-        // koeficient pro stav stěn
-        wallMultiplier: { normal: 1.0, worse: 1.2 }
-      };
-
-      function fmt(n) {
-        return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-      }
-
-      function calc() {
-        const r = state.rates[state.type];
-        const k = state.wallMultiplier[state.walls];
-        const low = state.m2 * r.low * k;
-        const high = state.m2 * r.high * k;
-
-        const out1 = document.getElementById("calcM2Out");
-        const out2 = document.getElementById("calcM2Out2");
-        const lowEl = document.getElementById("calcPriceLow");
-        const highEl = document.getElementById("calcPriceHigh");
-
-        if (out1) out1.textContent = state.m2;
-        if (out2) out2.textContent = state.m2;
-        if (lowEl) lowEl.textContent = fmt(low);
-        if (highEl) highEl.textContent = fmt(high);
-      }
-
-      const m2 = document.getElementById("calcM2");
-      const type = document.getElementById("calcType");
-      const w1 = document.getElementById("wallsNormal");
-      const w2 = document.getElementById("wallsWorse");
-
-      if (m2) m2.addEventListener("input", (e) => { state.m2 = parseInt(e.target.value, 10) || 0; calc(); });
-      if (type) type.addEventListener("change", (e) => { state.type = e.target.value; calc(); });
-      if (w1) w1.addEventListener("change", () => { state.walls = "normal"; calc(); });
-      if (w2) w2.addEventListener("change", () => { state.walls = "worse"; calc(); });
-
-      calc();
-    })();
-
-  (function () {
-    const els = document.querySelectorAll('.reveal');
-    if (!('IntersectionObserver' in window) || els.length === 0) {
-      els.forEach(el => el.classList.add('is-in'));
-      return;
-    }
-
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('is-in');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    els.forEach(el => io.observe(el));
-  })();
-  </script>
+  <script src="assets/js/calc.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
