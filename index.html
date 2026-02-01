@@ -3,67 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Malířské a lakýrnické práce | Mělník, Kralupy, Brandýs, Mladá Boleslav</title>
   <meta name="description" content="Malování bytů, domů a komerčních prostor. Čistá práce, férová cena, rychlá domluva. Působnost: Mělník, Kralupy nad Vltavou, Brandýs nad Labem, Mladá Boleslav.">
   <link rel="canonical" href="https://malirimelnik.cz/">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    :root { --hero-bg: radial-gradient(1200px circle at 20% 10%, rgba(13,110,253,.15), transparent 40%), radial-gradient(900px circle at 80% 20%, rgba(25,135,84,.12), transparent 45%); }
-    .hero { background: var(--hero-bg); }
-    .icon-badge { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: rgba(13,110,253,.1); }
-    .sticky-cta { position: sticky; bottom: 0; z-index: 1030; }
-    @media (min-width: 992px) { .sticky-cta { display: none; } }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/styles.css" rel="stylesheet">
 </head>
 
-<body>
-  <!-- Topbar -->
-  <nav class="navbar navbar-expand-lg bg-body border-bottom">
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true" tabindex="0">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body border-bottom sticky-top">
     <div class="container py-2">
-      <a class="navbar-brand fw-semibold" href="#top">Malíři Mělník</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menu">
+      <a class="navbar-brand fw-semibold" href="#top"><i class="bi bi-brush me-2"></i>malirimelnik.cz</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navWrap" aria-controls="navWrap" aria-expanded="false" aria-label="Menu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto gap-lg-2">
+
+      <div class="collapse navbar-collapse" id="navWrap">
+        <ul class="navbar-nav ms-auto gap-lg-2" id="mainNav">
           <li class="nav-item"><a class="nav-link" href="#sluzby">Služby</a></li>
-          <li class="nav-item"><a class="nav-link" href="#cena">Orientační cena</a></li>
+          <li class="nav-item"><a class="nav-link" href="#postup">Jak to probíhá</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cena">Cena</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reference">Reference</a></li>
           <li class="nav-item"><a class="nav-link" href="#pusobnost">Působnost</a></li>
           <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
           <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
         </ul>
+
         <div class="d-flex gap-2 ms-lg-3 mt-3 mt-lg-0">
-          <a class="btn btn-outline-primary" href="tel:+420777123456">Zavolat</a>
-          <a class="btn btn-primary" href="#kontakt">Nezávazná poptávka</a>
+          <a class="btn btn-outline-primary" href="tel:+420777123456"><i class="bi bi-telephone me-2"></i>Zavolat</a>
+          <a class="btn btn-primary" href="#kontakt"><i class="bi bi-send me-2"></i>Poptávka</a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <header id="top" class="hero">
-    <div class="container py-5 py-lg-6">
+  <header id="top" class="hero hero-dots">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-tint" aria-hidden="true"></div>
+  
+    <div class="container position-relative py-5">
       <div class="row align-items-center g-4">
         <div class="col-12 col-lg-7">
-          <p class="text-body-secondary mb-2">Mělník • Kralupy nad Vltavou • Brandýs nad Labem • Mladá Boleslav</p>
+          <p class="text-body-secondary mb-2"><i class="bi bi-geo-alt me-1"></i>Mělník • Kralupy nad Vltavou • Brandýs nad Labem • Mladá Boleslav</p>
           <h1 class="display-5 fw-bold mb-3">Malířské a lakýrnické práce bez nervů a nepořádku</h1>
           <p class="lead mb-4">Malování bytů, domů i komerčních prostor. Čistá práce, férová cena, rychlá domluva. Přijedeme, domluvíme se, uděláme to.</p>
+  
           <div class="d-flex flex-column flex-sm-row gap-2">
-            <a class="btn btn-primary btn-lg" href="tel:+420777123456">Zavolat: 777 123 456</a>
-            <a class="btn btn-outline-primary btn-lg" href="#cena">Spočítat cenu podle m²</a>
+            <a class="btn btn-primary btn-lg" href="tel:+420777123456"><i class="bi bi-telephone me-2"></i>Zavolat: 777 123 456</a>
+            <a class="btn btn-outline-primary btn-lg" href="#cena"><i class="bi bi-calculator me-2"></i>Spočítat cenu</a>
           </div>
+  
           <div class="d-flex flex-wrap gap-2 mt-4">
-            <span class="badge text-bg-light border">Zakrytí nábytku</span>
-            <span class="badge text-bg-light border">Příprava povrchů</span>
-            <span class="badge text-bg-light border">Úklid po práci</span>
-            <span class="badge text-bg-light border">Termíny podle domluvy</span>
+            <span class="badge text-bg-light border"><i class="bi bi-shield-check me-1"></i>Zakrytí</span>
+            <span class="badge text-bg-light border"><i class="bi bi-wrench-adjustable-circle me-1"></i>Příprava</span>
+            <span class="badge text-bg-light border"><i class="bi bi-stars me-1"></i>Úklid</span>
+            <span class="badge text-bg-light border"><i class="bi bi-clock me-1"></i>Termíny</span>
           </div>
         </div>
+  
         <div class="col-12 col-lg-5">
-          <div class="card shadow-sm">
+          <div class="card hero-card">
             <div class="card-body p-4">
-              <h2 class="h5 mb-3">Rychlá poptávka</h2>
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h2 class="h5 mb-0"><i class="bi bi-lightning-charge me-2"></i>Rychlá poptávka</h2>
+                <span class="badge text-bg-primary"><i class="bi bi-stopwatch me-1"></i>do 1 min</span>
+              </div>
+              <p class="text-body-secondary small mb-3">Stačí základ. Domluvíme detaily po telefonu.</p>
+  
               <form id="formQuickLead" class="row g-3" action="#" method="post" novalidate>
                 <div class="col-12">
                   <label for="qName" class="form-label">Jméno</label>
@@ -79,14 +92,18 @@
                 </div>
                 <div class="col-12">
                   <label for="qMsg" class="form-label">Co potřebujete</label>
-                  <textarea class="form-control" id="qMsg" name="message" rows="3" placeholder="Malování bytu 3+1, stropy, drobné opravy..." required></textarea>
+                  <textarea class="form-control" id="qMsg" name="message" rows="3" placeholder="Malování bytu 3+1, stěny + stropy, drobné opravy..." required></textarea>
                 </div>
                 <div class="col-12 d-grid">
-                  <button class="btn btn-primary btn-lg" type="submit">Odeslat poptávku</button>
+                  <button class="btn btn-primary btn-lg" type="submit"><i class="bi bi-send me-2"></i>Odeslat</button>
                 </div>
-                <p class="small text-body-secondary mb-0">Odpovíme co nejdřív. Ne, neposíláme spam. Máme lepší věci na práci.</p>
+                <p class="small text-body-secondary mb-0">Spam neposíláme. Máme štětce.</p>
               </form>
             </div>
+          </div>
+  
+          <div class="d-none d-lg-block mt-3 small text-body-secondary">
+            <i class="bi bi-info-circle me-1"></i>Tip: Uveďte přibližnou plochu (m²). Nacenění je pak rychlejší.
           </div>
         </div>
       </div>
@@ -94,40 +111,42 @@
   </header>
 
   <!-- Services -->
-  <section id="sluzby" class="py-5">
+  <section id="sluzby" class="section-pad bg-body">
     <div class="container">
       <div class="row mb-4 align-items-end g-2">
         <div class="col-12 col-lg-7">
           <h2 class="h1 mb-1">Služby</h2>
-          <p class="text-body-secondary mb-0">Jasně definované práce, žádné kouzlení v ceně “až uvidíme”.</p>
+          <p class="text-body-secondary mb-0">Jasně definované práce, žádné “to se nějak dopočítá”.</p>
         </div>
       </div>
 
       <div class="row g-3">
         <div class="col-12 col-lg-4">
-          <div class="card h-100 shadow-sm">
+          <div class="card h-100 shadow-soft border hover-lift">
             <div class="card-body p-4">
-              <div class="icon-badge mb-3">🖌️</div>
+              <div class="icon-badge mb-3"><i class="bi bi-house-door"></i></div>
               <h3 class="h5">Malování bytů a pokojů</h3>
-              <p class="mb-0">Malování bytů, domů a jednotlivých místností včetně zakrytí, přípravy povrchů a úklidu po práci.</p>
+              <p class="mb-0 text-body-secondary">Včetně zakrytí, běžné přípravy a úklidu po práci.</p>
             </div>
           </div>
         </div>
+
         <div class="col-12 col-lg-4">
-          <div class="card h-100 shadow-sm">
+          <div class="card h-100 shadow-soft border hover-lift">
             <div class="card-body p-4">
-              <div class="icon-badge mb-3">🏢</div>
+              <div class="icon-badge mb-3"><i class="bi bi-building"></i></div>
               <h3 class="h5">Komerční prostory</h3>
-              <p class="mb-0">Kanceláře, provozovny, obchody, sklady. Domluva termínu podle provozu, práce bez zbytečných průtahů.</p>
+              <p class="mb-0 text-body-secondary">Kanceláře, provozovny, obchody, sklady. Termín přizpůsobíme provozu.</p>
             </div>
           </div>
         </div>
+
         <div class="col-12 col-lg-4">
-          <div class="card h-100 shadow-sm">
+          <div class="card h-100 shadow-soft border hover-lift">
             <div class="card-body p-4">
-              <div class="icon-badge mb-3">🎨</div>
+              <div class="icon-badge mb-3"><i class="bi bi-paint-bucket"></i></div>
               <h3 class="h5">Lakýrnické práce</h3>
-              <p class="mb-0">Nátěry dveří, zárubní, radiátorů, zábradlí a dalších prvků. Precizní provedení a kvalitní materiály.</p>
+              <p class="mb-0 text-body-secondary">Nátěry dveří, zárubní, radiátorů, zábradlí a dalších prvků.</p>
             </div>
           </div>
         </div>
@@ -136,25 +155,65 @@
       <div class="alert alert-light border mt-4 mb-0">
         <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-2">
           <div>
-            <div class="fw-semibold">Potřebujete i drobné opravy před malováním?</div>
-            <div class="text-body-secondary">Praskliny, díry po hmoždinkách, nerovnosti. Řešíme běžně.</div>
+            <div class="fw-semibold"><i class="bi bi-tools me-2"></i>Drobné opravy před malováním</div>
+            <div class="text-body-secondary">Praskliny, díry po hmoždinkách, místní nerovnosti. Řešíme běžně.</div>
           </div>
-          <a class="btn btn-outline-primary" href="#kontakt">Domluvit prohlídku</a>
+          <a class="btn btn-outline-primary" href="#kontakt"><i class="bi bi-calendar2-check me-2"></i>Domluvit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="postup" class="section-pad bg-body-tertiary">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12 col-lg-7">
+          <h2 class="h1 mb-1">Jak to probíhá</h2>
+          <p class="text-body-secondary mb-0">Jednoduše. Bez dramat a bez “přijdu někdy”.</p>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-12 col-lg-3">
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
+            <div class="fw-semibold"><i class="bi bi-chat-dots me-2"></i>1) Domluva</div>
+            <div class="text-body-secondary">Zavoláte nebo napíšete. Řeknete co, kde a kdy.</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
+            <div class="fw-semibold"><i class="bi bi-receipt me-2"></i>2) Nacenění</div>
+            <div class="text-body-secondary">Orientačně hned, přesně po upřesnění nebo prohlídce.</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
+            <div class="fw-semibold"><i class="bi bi-brush me-2"></i>3) Realizace</div>
+            <div class="text-body-secondary">Zakrytí, příprava, malování. Kvalitně a čistě.</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
+            <div class="fw-semibold"><i class="bi bi-stars me-2"></i>4) Úklid</div>
+            <div class="text-body-secondary">Po práci čisto. Žádné “to si pak utřete”.</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Price calculator -->
-  <section id="cena" class="py-5 bg-body-tertiary">
+  <section id="cena" class="section-pad bg-body">
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-12 col-lg-6">
           <h2 class="h1 mb-2">Orientační cena podle m²</h2>
           <p class="text-body-secondary mb-0">Rychlý odhad. Konečná cena záleží na stavu stěn, počtu vrstev a rozsahu přípravy.</p>
         </div>
+
         <div class="col-12 col-lg-6">
-          <div class="card shadow-sm">
+          <div class="card border-0 shadow-soft">
             <div class="card-body p-4">
               <div class="row g-3">
                 <div class="col-12">
@@ -166,57 +225,79 @@
                 </div>
 
                 <div class="col-12">
-                  <label for="calcM2" class="form-label d-flex justify-content-between"><span>Plocha (m²)</span><span class="text-body-secondary"><span id="calcM2Out">60</span> m²</span></label>
+                  <label class="form-label">Stav stěn</label>
+                  <div class="btn-group w-100" role="group" aria-label="Stav stěn">
+                    <input type="radio" class="btn-check" name="calcWalls" id="wallsNormal" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="wallsNormal"><i class="bi bi-check-circle me-2"></i>Běžný</label>
+
+                    <input type="radio" class="btn-check" name="calcWalls" id="wallsWorse" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="wallsWorse"><i class="bi bi-exclamation-circle me-2"></i>Horší (opravy)</label>
+                  </div>
+                  <div class="small text-body-secondary mt-1">Horší stav přidá čas na přípravu podkladu.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="calcM2" class="form-label d-flex justify-content-between">
+                    <span>Plocha (m²)</span>
+                    <span class="text-body-secondary"><span id="calcM2Out">60</span> m²</span>
+                  </label>
                   <input type="range" class="form-range" id="calcM2" min="10" max="300" step="1" value="60">
                 </div>
 
                 <div class="col-12">
                   <div class="p-3 rounded border bg-body">
                     <div class="d-flex justify-content-between align-items-baseline">
-                      <div class="fw-semibold">Orientační cena</div>
+                      <div class="fw-semibold"><i class="bi bi-calculator me-2"></i>Orientační cena</div>
                       <div class="h4 mb-0"><span id="calcPriceLow">0</span> – <span id="calcPriceHigh">0</span> Kč</div>
                     </div>
-                    <div class="small text-body-secondary mt-1">Včetně běžné přípravy a zakrytí. Nezahrnuje mimořádné opravy podkladu.</div>
+                    <div class="d-flex align-items-center gap-2 mt-2">
+                      <span class="badge text-bg-primary"><i class="bi bi-lightning-charge me-1"></i>Odhad</span>
+                      <span class="small text-body-secondary">počítáno pro <span id="calcM2Out2">60</span> m²</span>
+                    </div>
+                    <div class="small text-body-secondary mt-2">Cena je orientační. Přesnou nabídku dáme po upřesnění rozsahu a stavu stěn.</div>
                   </div>
                 </div>
 
                 <div class="col-12 d-grid">
-                  <a class="btn btn-primary btn-lg" href="#kontakt">Chci přesnou cenu</a>
-                </div>
-
-                <div class="col-12">
-                  <p class="small text-body-secondary mb-0">Tip: Pokud chcete rychleji nacenit, napište plochu, město a co se maluje (stěny / stropy / vše).</p>
+                  <a class="btn btn-primary btn-lg" href="#kontakt"><i class="bi bi-send me-2"></i>Chci přesnou cenu</a>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="small text-body-secondary mt-2"><i class="bi bi-info-circle me-1"></i>Tip: Napište i město, ať rovnou víme logistiku.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- References -->
+  <section id="reference" class="section-pad bg-body-tertiary">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12 col-lg-7">
+          <h2 class="h1 mb-1">Reference</h2>
+          <p class="text-body-secondary mb-0">Názory lidí, kterým jsme nenechali byt jako staveniště.</p>
         </div>
       </div>
 
-      <!-- Why us -->
-      <div class="row g-3 mt-4">
-        <div class="col-12 col-lg-3">
-          <div class="p-4 border rounded bg-body h-100">
-            <div class="fw-semibold">Čistá práce</div>
-            <div class="text-body-secondary">Zakrytí, ochrana podlah, úklid po dokončení.</div>
+      <div class="row g-3">
+        <div class="col-12 col-lg-4">
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
+            <div class="fw-semibold"><i class="bi bi-quote me-2"></i>Jana, Kralupy</div>
+            <div class="text-body-secondary">Rychlá domluva, čistá práce, byt hotový za den. Doporučuju.</div>
           </div>
         </div>
-        <div class="col-12 col-lg-3">
-          <div class="p-4 border rounded bg-body h-100">
-            <div class="fw-semibold">Férová cena</div>
-            <div class="text-body-secondary">Dopředu víte, za co platíte.</div>
+        <div class="col-12 col-lg-4">
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
+            <div class="fw-semibold"><i class="bi bi-quote me-2"></i>Petr, Mělník</div>
+            <div class="text-body-secondary">Zakryli všechno, po sobě uklidili. Cena seděla podle domluvy.</div>
           </div>
         </div>
-        <div class="col-12 col-lg-3">
-          <div class="p-4 border rounded bg-body h-100">
-            <div class="fw-semibold">Termíny</div>
-            <div class="text-body-secondary">Domluva podle vašich možností.</div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-3">
-          <div class="p-4 border rounded bg-body h-100">
-            <div class="fw-semibold">Lokálně</div>
-            <div class="text-body-secondary">Mělník, Kralupy, Brandýs, Mladá Boleslav.</div>
+        <div class="col-12 col-lg-4">
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
+            <div class="fw-semibold"><i class="bi bi-quote me-2"></i>Provozovna, Brandýs</div>
+            <div class="text-body-secondary">Malování mimo špičku, bez omezení provozu. Rychlé a profi.</div>
           </div>
         </div>
       </div>
@@ -224,44 +305,44 @@
   </section>
 
   <!-- Coverage -->
-  <section id="pusobnost" class="py-5">
+  <section id="pusobnost" class="section-pad bg-body">
     <div class="container">
       <div class="row align-items-end g-2 mb-4">
         <div class="col-12 col-lg-7">
           <h2 class="h1 mb-1">Působnost</h2>
-          <p class="text-body-secondary mb-0">Primárně tyhle oblasti. Kousek navíc po domluvě.</p>
+          <p class="text-body-secondary mb-0">Mělník, Kralupy nad Vltavou, Brandýs nad Labem a Mladá Boleslav. Kousek navíc po domluvě.</p>
         </div>
       </div>
 
       <div class="row g-3">
         <div class="col-12 col-lg-3">
           <a class="text-decoration-none" href="/malirske-prace-melnik">
-            <div class="p-4 border rounded h-100">
-              <div class="fw-semibold">Mělník</div>
+            <div class="p-4 border rounded h-100 shadow-soft hover-lift">
+              <div class="fw-semibold"><i class="bi bi-geo me-2"></i>Mělník</div>
               <div class="text-body-secondary">Malování bytů, domů a pokojů v Mělníku a okolí.</div>
             </div>
           </a>
         </div>
         <div class="col-12 col-lg-3">
           <a class="text-decoration-none" href="/malirske-prace-kralupy-nad-vltavou">
-            <div class="p-4 border rounded h-100">
-              <div class="fw-semibold">Kralupy nad Vltavou</div>
+            <div class="p-4 border rounded h-100 shadow-soft hover-lift">
+              <div class="fw-semibold"><i class="bi bi-geo me-2"></i>Kralupy nad Vltavou</div>
               <div class="text-body-secondary">Rychlé termíny pro Kralupsko a okolí.</div>
             </div>
           </a>
         </div>
         <div class="col-12 col-lg-3">
           <a class="text-decoration-none" href="/malirske-prace-brandys-nad-labem">
-            <div class="p-4 border rounded h-100">
-              <div class="fw-semibold">Brandýs nad Labem</div>
+            <div class="p-4 border rounded h-100 shadow-soft hover-lift">
+              <div class="fw-semibold"><i class="bi bi-geo me-2"></i>Brandýs nad Labem</div>
               <div class="text-body-secondary">Brandýs a Stará Boleslav, byty i rodinné domy.</div>
             </div>
           </a>
         </div>
         <div class="col-12 col-lg-3">
           <a class="text-decoration-none" href="/malirske-prace-mlada-boleslav">
-            <div class="p-4 border rounded h-100">
-              <div class="fw-semibold">Mladá Boleslav</div>
+            <div class="p-4 border rounded h-100 shadow-soft hover-lift">
+              <div class="fw-semibold"><i class="bi bi-geo me-2"></i>Mladá Boleslav</div>
               <div class="text-body-secondary">Byty i komerční prostory, větší zakázky.</div>
             </div>
           </a>
@@ -271,32 +352,57 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="py-5 bg-body-tertiary">
+  <section id="faq" class="section-pad bg-body-tertiary">
     <div class="container">
       <div class="row mb-4">
         <div class="col-12 col-lg-7">
           <h2 class="h1 mb-1">FAQ</h2>
-          <p class="text-body-secondary mb-0">Otázky, které zaznívají pořád. Tak ať je nemusíme znovu vymýšlet.</p>
+          <p class="text-body-secondary mb-0">Otázky, které se opakují pořád. Tak ať to máme na jednom místě.</p>
         </div>
       </div>
 
-      <div class="accordion" id="faqAcc">
+      <div class="accordion shadow-soft rounded overflow-hidden" id="faqAcc">
         <div class="accordion-item">
-          <h3 class="accordion-header" id="q1"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">Jaká je cena malování?</button></h3>
+          <h3 class="accordion-header" id="q1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+              <i class="bi bi-question-circle me-2"></i>Jaká je cena malování?
+            </button>
+          </h3>
           <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAcc">
-            <div class="accordion-body">Cena se obvykle odvíjí od plochy, stavu stěn a rozsahu přípravy. Proto nabízíme orientační kalkulaci a přesnou nabídku po domluvě.</div>
+            <div class="accordion-body">Cena se odvíjí od plochy, stavu stěn a rozsahu přípravy. Proto nabízíme orientační kalkulaci a přesnou nabídku po domluvě.</div>
           </div>
         </div>
+
         <div class="accordion-item">
-          <h3 class="accordion-header" id="q2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">Musím byt vyklidit?</button></h3>
+          <h3 class="accordion-header" id="q2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+              <i class="bi bi-question-circle me-2"></i>Musím byt vyklidit?
+            </button>
+          </h3>
           <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAcc">
-            <div class="accordion-body">Nábytek zakryjeme a ochráníme. Drobnosti a cenné věci je dobré uklidit, aby se vše udělalo rychle a bezpečně.</div>
+            <div class="accordion-body">Nábytek zakryjeme a ochráníme. Drobnosti a cenné věci je dobré uklidit, aby se práce udělala rychle a bezpečně.</div>
           </div>
         </div>
+
         <div class="accordion-item">
-          <h3 class="accordion-header" id="q3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">Jak dlouho trvá malování?</button></h3>
+          <h3 class="accordion-header" id="q3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+              <i class="bi bi-question-circle me-2"></i>Jak dlouho trvá malování?
+            </button>
+          </h3>
           <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAcc">
             <div class="accordion-body">Běžný byt podle velikosti obvykle 1–2 dny. U větších prostorů domluvíme harmonogram předem.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="q4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">
+              <i class="bi bi-question-circle me-2"></i>Kdy se dostanete na termín?
+            </button>
+          </h3>
+          <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#faqAcc">
+            <div class="accordion-body">Záleží na sezóně a rozsahu zakázky. Napište město a přibližnou plochu, navrhneme nejbližší možné termíny.</div>
           </div>
         </div>
       </div>
@@ -304,31 +410,31 @@
   </section>
 
   <!-- Contact -->
-  <section id="kontakt" class="py-5">
+  <section id="kontakt" class="section-pad bg-body">
     <div class="container">
       <div class="row g-4 align-items-start">
         <div class="col-12 col-lg-5">
           <h2 class="h1 mb-2">Kontakt</h2>
           <p class="text-body-secondary">Zavolejte nebo pošlete poptávku. Odpovíme co nejdřív.</p>
 
-          <div class="border rounded p-4">
+          <div class="border rounded p-4 shadow-soft">
             <div class="d-flex flex-column gap-2">
-              <div><span class="fw-semibold">Telefon:</span> <a href="tel:+420777123456">+420 777 123 456</a></div>
-              <div><span class="fw-semibold">E-mail:</span> <a href="mailto:info@malirimelnik.cz">info@malirimelnik.cz</a></div>
-              <div class="text-body-secondary small">Působnost: Mělník, Kralupy nad Vltavou, Brandýs nad Labem, Mladá Boleslav.</div>
+              <div><i class="bi bi-telephone me-2"></i><span class="fw-semibold">Telefon:</span> <a href="tel:+420777123456">+420 777 123 456</a></div>
+              <div><i class="bi bi-envelope me-2"></i><span class="fw-semibold">E-mail:</span> <a href="mailto:info@malirimelnik.cz">info@malirimelnik.cz</a></div>
+              <div class="text-body-secondary small"><i class="bi bi-geo-alt me-2"></i>Působnost: Mělník, Kralupy, Brandýs, Mladá Boleslav.</div>
             </div>
           </div>
 
           <div class="alert alert-light border mt-3 mb-0">
-            <div class="fw-semibold">Tip pro rychlé nacenění</div>
+            <div class="fw-semibold"><i class="bi bi-info-circle me-2"></i>Tip pro rychlé nacenění</div>
             <div class="text-body-secondary">Napište plochu v m², město a co se maluje (stěny / stropy / vše).</div>
           </div>
         </div>
 
         <div class="col-12 col-lg-7">
-          <div class="card shadow-sm">
+          <div class="card border-0 shadow-soft">
             <div class="card-body p-4">
-              <h3 class="h5 mb-3">Nezávazná poptávka</h3>
+              <h3 class="h5 mb-3"><i class="bi bi-send me-2"></i>Nezávazná poptávka</h3>
               <form id="formLead" class="row g-3" action="#" method="post" novalidate>
                 <div class="col-12 col-md-6">
                   <label for="fName" class="form-label">Jméno</label>
@@ -370,10 +476,10 @@
                   </div>
                 </div>
                 <div class="col-12 d-grid d-md-flex gap-2">
-                  <button class="btn btn-primary btn-lg" type="submit">Odeslat</button>
-                  <a class="btn btn-outline-primary btn-lg" href="tel:+420777123456">Raději zavolám</a>
+                  <button class="btn btn-primary btn-lg" type="submit"><i class="bi bi-send me-2"></i>Odeslat</button>
+                  <a class="btn btn-outline-primary btn-lg" href="tel:+420777123456"><i class="bi bi-telephone me-2"></i>Raději zavolám</a>
                 </div>
-                <p class="small text-body-secondary mb-0">Pozn.: Tenhle formulář teď nikam neposílá, protože backend si teprve uděláme. Šokující, já vím.</p>
+                <p class="small text-body-secondary mb-0">Pozn.: Formuláře jsou zatím demo (bez backendu).</p>
               </form>
             </div>
           </div>
@@ -382,8 +488,8 @@
 
       <footer class="pt-5">
         <div class="border-top pt-3 d-flex flex-column flex-lg-row justify-content-between gap-2">
-          <div class="text-body-secondary small">© <span id="year"></span> Malířské práce | malirimelnik.cz</div>
-          <div class="small"><a class="text-decoration-none" href="#top">Nahoru</a></div>
+          <div class="text-body-secondary small">© <span id="year"></span> malirimelnik.cz</div>
+          <div class="small"><a class="text-decoration-none" href="#top"><i class="bi bi-arrow-up me-1"></i>Nahoru</a></div>
         </div>
       </footer>
     </div>
@@ -393,8 +499,8 @@
   <div class="sticky-cta bg-body border-top">
     <div class="container py-2">
       <div class="d-flex gap-2">
-        <a class="btn btn-outline-primary w-50" href="tel:+420777123456">Zavolat</a>
-        <a class="btn btn-primary w-50" href="#kontakt">Poptávka</a>
+        <a class="btn btn-outline-primary w-50" href="tel:+420777123456"><i class="bi bi-telephone me-2"></i>Zavolat</a>
+        <a class="btn btn-primary w-50" href="#kontakt"><i class="bi bi-send me-2"></i>Poptávka</a>
       </div>
     </div>
   </div>
@@ -402,18 +508,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     (function () {
-      const $ = (id) => document.getElementById(id);
-
-      const year = new Date().getFullYear();
-      $("year").textContent = year;
+      const year = document.getElementById("year");
+      if (year) year.textContent = new Date().getFullYear();
 
       const state = {
         m2: 60,
         type: "byt",
+        walls: "normal",
         rates: {
           byt: { low: 45, high: 65 },
           komerce: { low: 55, high: 80 }
-        }
+        },
+        wallMultiplier: { normal: 1.0, worse: 1.2 }
       };
 
       function fmt(n) {
@@ -422,22 +528,30 @@
 
       function calc() {
         const r = state.rates[state.type];
-        const low = state.m2 * r.low;
-        const high = state.m2 * r.high;
-        $("calcM2Out").textContent = state.m2;
-        $("calcPriceLow").textContent = fmt(low);
-        $("calcPriceHigh").textContent = fmt(high);
+        const k = state.wallMultiplier[state.walls];
+        const low = state.m2 * r.low * k;
+        const high = state.m2 * r.high * k;
+
+        const out1 = document.getElementById("calcM2Out");
+        const out2 = document.getElementById("calcM2Out2");
+        const lowEl = document.getElementById("calcPriceLow");
+        const highEl = document.getElementById("calcPriceHigh");
+
+        if (out1) out1.textContent = state.m2;
+        if (out2) out2.textContent = state.m2;
+        if (lowEl) lowEl.textContent = fmt(low);
+        if (highEl) highEl.textContent = fmt(high);
       }
 
-      $("calcM2").addEventListener("input", (e) => {
-        state.m2 = parseInt(e.target.value, 10) || 0;
-        calc();
-      });
+      const m2 = document.getElementById("calcM2");
+      const type = document.getElementById("calcType");
+      const w1 = document.getElementById("wallsNormal");
+      const w2 = document.getElementById("wallsWorse");
 
-      $("calcType").addEventListener("change", (e) => {
-        state.type = e.target.value;
-        calc();
-      });
+      if (m2) m2.addEventListener("input", (e) => { state.m2 = parseInt(e.target.value, 10) || 0; calc(); });
+      if (type) type.addEventListener("change", (e) => { state.type = e.target.value; calc(); });
+      if (w1) w1.addEventListener("change", () => { state.walls = "normal"; calc(); });
+      if (w2) w2.addEventListener("change", () => { state.walls = "worse"; calc(); });
 
       calc();
     })();
