@@ -8,9 +8,21 @@
   <meta name="description" content="Malování bytů, domů a komerčních prostor. Čistá práce, férová cena, rychlá domluva. Působnost: Mělník, Kralupy nad Vltavou, Brandýs nad Labem, Mladá Boleslav.">
   <link rel="canonical" href="https://malirimelnik.cz/">
 
+  <script>
+    (function () {
+      const mq = window.matchMedia('(prefers-color-scheme: dark)');
+      function apply() {
+        document.documentElement.setAttribute('data-bs-theme', mq.matches ? 'dark' : 'light');
+      }
+      apply();
+      if (mq.addEventListener) mq.addEventListener('change', apply);
+      else if (mq.addListener) mq.addListener(apply);
+    })();
+  </script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="assets/styles.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true" tabindex="0">
@@ -18,7 +30,11 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-body border-bottom sticky-top">
     <div class="container py-2">
-      <a class="navbar-brand fw-semibold" href="#top"><i class="bi bi-brush me-2"></i>malirimelnik.cz</a>
+      <a class="navbar-brand fw-semibold" href="#top">
+        <i class="bi bi-brush fs-3 text-primary"></i>
+        Malíři<span class="fw-normal">Mělník.cz</span>
+      </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navWrap" aria-controls="navWrap" aria-expanded="false" aria-label="Menu">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -51,13 +67,22 @@
     <div class="container position-relative py-5">
       <div class="row align-items-center g-4">
         <div class="col-12 col-lg-7">
-          <p class="text-body-secondary mb-2"><i class="bi bi-geo-alt me-1"></i>Mělník • Kralupy nad Vltavou • Brandýs nad Labem • Mladá Boleslav</p>
-          <h1 class="display-5 fw-bold mb-3">Malířské a lakýrnické práce bez nervů a nepořádku</h1>
-          <p class="lead mb-4">Malování bytů, domů i komerčních prostor. Čistá práce, férová cena, rychlá domluva. Přijedeme, domluvíme se, uděláme to.</p>
+          <p class="mb-2" style="color: var(--bs-primary-bg-subtle);">
+            <i class="bi bi-geo-alt me-1"></i>Mělník • Kralupy nad Vltavou • Brandýs nad Labem • Mladá Boleslav
+          </p>
+          
+          <h1 class="display-5 fw-bold text-white mb-3">Malířské a lakýrnické práce bez nervů a nepořádku</h1>
+          <p class="lead text-white mb-4">
+            Malování bytů, domů i komerčních prostor. Čistá práce, férová cena, rychlá domluva. Přijedeme, domluvíme se, uděláme to.
+          </p>
   
           <div class="d-flex flex-column flex-sm-row gap-2">
-            <a class="btn btn-primary btn-lg" href="tel:+420777123456"><i class="bi bi-telephone me-2"></i>Zavolat: 777 123 456</a>
-            <a class="btn btn-outline-primary btn-lg" href="#cena"><i class="bi bi-calculator me-2"></i>Spočítat cenu</a>
+            <a class="btn btn-primary btn-lg" href="tel:+420777123456">
+              <i class="bi bi-telephone me-2"></i>Zavolat: 777 123 456
+            </a>
+            <a class="btn btn-outline-primary btn-lg" href="#cena">
+              <i class="bi bi-calculator me-2"></i>Spočítat cenu
+            </a>
           </div>
   
           <div class="d-flex flex-wrap gap-2 mt-4">
@@ -72,8 +97,8 @@
           <div class="card hero-card">
             <div class="card-body p-4">
               <div class="d-flex align-items-center justify-content-between mb-2">
-                <h2 class="h5 mb-0"><i class="bi bi-lightning-charge me-2"></i>Rychlá poptávka</h2>
-                <span class="badge text-bg-primary"><i class="bi bi-stopwatch me-1"></i>do 1 min</span>
+                <h2 class="h5 mb-0 text-primary"><i class="bi bi-lightning-charge me-2"></i>Rychlá poptávka</h2>
+                <span class="badge text-bg-primary"><i class="bi bi-stopwatch me-1"></i>Vyplníte za 1 min</span>
               </div>
               <p class="text-body-secondary small mb-3">Stačí základ. Domluvíme detaily po telefonu.</p>
   
@@ -122,7 +147,7 @@
 
       <div class="row g-3">
         <div class="col-12 col-lg-4">
-          <div class="card h-100 shadow-soft border hover-lift">
+          <div class="card h-100 shadow-soft border hover-lift reveal reveal-d1">
             <div class="card-body p-4">
               <div class="icon-badge mb-3"><i class="bi bi-house-door"></i></div>
               <h3 class="h5">Malování bytů a pokojů</h3>
@@ -132,7 +157,7 @@
         </div>
 
         <div class="col-12 col-lg-4">
-          <div class="card h-100 shadow-soft border hover-lift">
+          <div class="card h-100 shadow-soft border hover-lift reveal reveal-d2">
             <div class="card-body p-4">
               <div class="icon-badge mb-3"><i class="bi bi-building"></i></div>
               <h3 class="h5">Komerční prostory</h3>
@@ -142,7 +167,7 @@
         </div>
 
         <div class="col-12 col-lg-4">
-          <div class="card h-100 shadow-soft border hover-lift">
+          <div class="card h-100 shadow-soft border hover-lift reveal reveal-d3">
             <div class="card-body p-4">
               <div class="icon-badge mb-3"><i class="bi bi-paint-bucket"></i></div>
               <h3 class="h5">Lakýrnické práce</h3>
@@ -176,30 +201,54 @@
 
       <div class="row g-3">
         <div class="col-12 col-lg-3">
-          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
-            <div class="fw-semibold"><i class="bi bi-chat-dots me-2"></i>1) Domluva</div>
-            <div class="text-body-secondary">Zavoláte nebo napíšete. Řeknete co, kde a kdy.</div>
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift reveal reveal-d1">
+            <div class="d-flex align-items-start gap-3">
+              <i class="bi bi-chat-dots text-primary fs-3"></i>
+              <div>
+                <div class="fw-semibold mb-1">1) Domluva</div>
+                <div class="text-body-secondary">Zavoláte nebo napíšete. Řeknete co, kde a kdy.</div>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="col-12 col-lg-3">
-          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
-            <div class="fw-semibold"><i class="bi bi-receipt me-2"></i>2) Nacenění</div>
-            <div class="text-body-secondary">Orientačně hned, přesně po upřesnění nebo prohlídce.</div>
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift reveal reveal-d2">
+            <div class="d-flex align-items-start gap-3">
+              <i class="bi bi-receipt text-primary fs-3"></i>
+              <div>
+                <div class="fw-semibold mb-1">2) Nacenění</div>
+                <div class="text-body-secondary">Orientačně hned, přesně po upřesnění nebo prohlídce.</div>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="col-12 col-lg-3">
-          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
-            <div class="fw-semibold"><i class="bi bi-brush me-2"></i>3) Realizace</div>
-            <div class="text-body-secondary">Zakrytí, příprava, malování. Kvalitně a čistě.</div>
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift reveal reveal-d3">
+            <div class="d-flex align-items-start gap-3">
+              <i class="bi bi-brush text-primary fs-3"></i>
+              <div>
+                <div class="fw-semibold mb-1">3) Realizace</div>
+                <div class="text-body-secondary">Zakrytí, příprava, malování. Kvalitně a čistě.</div>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="col-12 col-lg-3">
-          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
-            <div class="fw-semibold"><i class="bi bi-stars me-2"></i>4) Úklid</div>
-            <div class="text-body-secondary">Po práci čisto. Žádné “to si pak utřete”.</div>
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift reveal reveal-d4">
+            <div class="d-flex align-items-start gap-3">
+              <i class="bi bi-stars text-primary fs-3"></i>
+              <div>
+                <div class="fw-semibold mb-1">4) Úklid</div>
+                <div class="text-body-secondary">Po práci čisto. Žádné “to si pak utřete”.</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -213,7 +262,7 @@
         </div>
 
         <div class="col-12 col-lg-6">
-          <div class="card border-0 shadow-soft">
+          <div class="card border shadow-soft hover-lift bg-body-tertiary reveal reveal-right reveal-d2">
             <div class="card-body p-4">
               <div class="row g-3">
                 <div class="col-12">
@@ -226,12 +275,16 @@
 
                 <div class="col-12">
                   <label class="form-label">Stav stěn</label>
-                  <div class="btn-group w-100" role="group" aria-label="Stav stěn">
+                  <div class="d-flex gap-2 w-100" role="group" aria-label="Stav stěn">
                     <input type="radio" class="btn-check" name="calcWalls" id="wallsNormal" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="wallsNormal"><i class="bi bi-check-circle me-2"></i>Běžný</label>
+                    <label class="btn btn-outline-primary flex-fill" for="wallsNormal">
+                      <i class="bi bi-check-circle me-2"></i>Běžný
+                    </label>
 
                     <input type="radio" class="btn-check" name="calcWalls" id="wallsWorse" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="wallsWorse"><i class="bi bi-exclamation-circle me-2"></i>Horší (opravy)</label>
+                    <label class="btn btn-outline-primary flex-fill" for="wallsWorse">
+                      <i class="bi bi-exclamation-circle me-2"></i>Horší (opravy)
+                    </label>
                   </div>
                   <div class="small text-body-secondary mt-1">Horší stav přidá čas na přípravu podkladu.</div>
                 </div>
@@ -265,7 +318,9 @@
             </div>
           </div>
 
-          <div class="small text-body-secondary mt-2"><i class="bi bi-info-circle me-1"></i>Tip: Napište i město, ať rovnou víme logistiku.</div>
+          <div class="small text-body-secondary mt-2">
+            <i class="bi bi-info-circle me-1"></i>Tip: Napište i město, ať rovnou víme logistiku.
+          </div>
         </div>
       </div>
     </div>
@@ -283,19 +338,19 @@
 
       <div class="row g-3">
         <div class="col-12 col-lg-4">
-          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift reveal reveal-d1">
             <div class="fw-semibold"><i class="bi bi-quote me-2"></i>Jana, Kralupy</div>
             <div class="text-body-secondary">Rychlá domluva, čistá práce, byt hotový za den. Doporučuju.</div>
           </div>
         </div>
         <div class="col-12 col-lg-4">
-          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift reveal reveal-d2">
             <div class="fw-semibold"><i class="bi bi-quote me-2"></i>Petr, Mělník</div>
             <div class="text-body-secondary">Zakryli všechno, po sobě uklidili. Cena seděla podle domluvy.</div>
           </div>
         </div>
         <div class="col-12 col-lg-4">
-          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift">
+          <div class="p-4 border rounded bg-body h-100 shadow-soft hover-lift reveal reveal-d3">
             <div class="fw-semibold"><i class="bi bi-quote me-2"></i>Provozovna, Brandýs</div>
             <div class="text-body-secondary">Malování mimo špičku, bez omezení provozu. Rychlé a profi.</div>
           </div>
@@ -310,7 +365,9 @@
       <div class="row align-items-end g-2 mb-4">
         <div class="col-12 col-lg-7">
           <h2 class="h1 mb-1">Působnost</h2>
-          <p class="text-body-secondary mb-0">Mělník, Kralupy nad Vltavou, Brandýs nad Labem a Mladá Boleslav. Kousek navíc po domluvě.</p>
+          <p class="text-body-secondary mb-0">
+            Mělník, Kralupy nad Vltavou, Brandýs nad Labem a Mladá Boleslav. Kousek navíc po domluvě.
+          </p>
         </div>
       </div>
 
@@ -419,22 +476,41 @@
 
           <div class="border rounded p-4 shadow-soft">
             <div class="d-flex flex-column gap-2">
-              <div><i class="bi bi-telephone me-2"></i><span class="fw-semibold">Telefon:</span> <a href="tel:+420777123456">+420 777 123 456</a></div>
-              <div><i class="bi bi-envelope me-2"></i><span class="fw-semibold">E-mail:</span> <a href="mailto:info@malirimelnik.cz">info@malirimelnik.cz</a></div>
-              <div class="text-body-secondary small"><i class="bi bi-geo-alt me-2"></i>Působnost: Mělník, Kralupy, Brandýs, Mladá Boleslav.</div>
+              <div>
+                <i class="bi bi-telephone me-2"></i>
+                <span class="fw-semibold">Telefon:</span> 
+                <a href="tel:+420777123456">+420 777 123 456</a>
+              </div>
+
+              <div>
+                <i class="bi bi-envelope me-2"></i>
+                <span class="fw-semibold">E-mail:</span> 
+                <a href="mailto:info@malirimelnik.cz">info@malirimelnik.cz</a>
+              </div>
+
+              <div class="text-body-secondary small">
+                <i class="bi bi-geo-alt me-2"></i>
+                Působnost: Mělník, Kralupy, Brandýs, Mladá Boleslav.
+              </div>
             </div>
           </div>
 
           <div class="alert alert-light border mt-3 mb-0">
-            <div class="fw-semibold"><i class="bi bi-info-circle me-2"></i>Tip pro rychlé nacenění</div>
-            <div class="text-body-secondary">Napište plochu v m², město a co se maluje (stěny / stropy / vše).</div>
+            <div class="fw-semibold">
+              <i class="bi bi-info-circle me-2"></i>
+              Tip pro rychlé nacenění
+            </div>
+            
+            <div class="text-body-secondary">
+              Napište plochu v m², město a co se maluje (stěny / stropy / vše).
+            </div>
           </div>
         </div>
 
         <div class="col-12 col-lg-7">
-          <div class="card border-0 shadow-soft">
+          <div class="card border shadow-soft hover-lift">
             <div class="card-body p-4">
-              <h3 class="h5 mb-3"><i class="bi bi-send me-2"></i>Nezávazná poptávka</h3>
+              <h3 class="h5 mb-3 text-primary"><i class="bi bi-send me-2"></i>Nezávazná poptávka</h3>
               <form id="formLead" class="row g-3" action="#" method="post" novalidate>
                 <div class="col-12 col-md-6">
                   <label for="fName" class="form-label">Jméno</label>
@@ -488,7 +564,7 @@
 
       <footer class="pt-5">
         <div class="border-top pt-3 d-flex flex-column flex-lg-row justify-content-between gap-2">
-          <div class="text-body-secondary small">© <span id="year"></span> malirimelnik.cz</div>
+          <div class="text-body-secondary small">© <span id="year"></span> MalířiMělník.cz</div>
           <div class="small"><a class="text-decoration-none" href="#top"><i class="bi bi-arrow-up me-1"></i>Nahoru</a></div>
         </div>
       </footer>
@@ -512,13 +588,16 @@
       if (year) year.textContent = new Date().getFullYear();
 
       const state = {
+        // default pro: metry, typ, stav stěn
         m2: 60,
         type: "byt",
         walls: "normal",
         rates: {
+          // sazby v Kč/m²
           byt: { low: 45, high: 65 },
           komerce: { low: 55, high: 80 }
         },
+        // koeficient pro stav stěn
         wallMultiplier: { normal: 1.0, worse: 1.2 }
       };
 
@@ -555,6 +634,25 @@
 
       calc();
     })();
+
+  (function () {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || els.length === 0) {
+      els.forEach(el => el.classList.add('is-in'));
+      return;
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    els.forEach(el => io.observe(el));
+  })();
   </script>
 </body>
 </html>
